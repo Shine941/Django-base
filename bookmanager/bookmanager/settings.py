@@ -14,7 +14,16 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+# print(__file__)
+# /home/malifei-py/桌面/Django项目/Django基础/Django-base/bookmanager/bookmanager/settings.py
+# print(Path(__file__))
+# /home/malifei-py/桌面/Django项目/Django基础/Django-base/bookmanager/bookmanager/settings.py
+# print(Path(__file__).resolve())
+# /home/malifei-py/桌面/Django项目/Django基础/Django-base/bookmanager/bookmanager/settings.py
+# print(Path(__file__).resolve().parent)
+# /home/malifei-py/桌面/Django项目/Django基础/Django-base/bookmanager/bookmanager
+# print(Path(__file__).resolve().parent.parent)
+# /home/malifei-py/桌面/Django项目/Django基础/Django-base/bookmanager
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -23,7 +32,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-k)0#r^5k4%c5r*t072_y6mjav&u*u&h($z81oi&6t4yq_md$%q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# 调试模式
+# 在我们处于开发的时候，我们需要看到更多的信息，所以要开启debug模式
+# 程序上线后就不许要debug模式了
 DEBUG = True
+# 允许什么样的形式访问我们的项目，默认是127.0.0.1
+# *的话就是可以使用ip也可以使用127
 # 默认是127.0.0.1
 ALLOWED_HOSTS = ['192.168.81.128', '127.0.0.1', '192.168.137.1']
 

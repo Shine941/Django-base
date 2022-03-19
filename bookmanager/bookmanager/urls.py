@@ -20,5 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # path(路由,视图函数名)
     # path('index/', index)
-    path('blog/', include('book.urls'))
+    path('', include('book.urls'))
 ]

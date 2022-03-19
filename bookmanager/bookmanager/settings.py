@@ -24,12 +24,12 @@ SECRET_KEY = 'django-insecure-k)0#r^5k4%c5r*t072_y6mjav&u*u&h($z81oi&6t4yq_md$%q
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = []
+# 默认是127.0.0.1
+ALLOWED_HOSTS = ['192.168.81.128', '127.0.0.1', '192.168.137.1']
 
 
 # Application definition
-
+# 注册安装子应用
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'book',  # 方案一
+    # 'book.apps.BookConfig',  # 方案二
+    # 理论上要注册自应用，不注册会出问题
 ]
 
 MIDDLEWARE = [
@@ -72,7 +75,8 @@ WSGI_APPLICATION = 'bookmanager.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
+# sqlite3是关系型数据库
+# 过渡（了解）
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -102,10 +106,10 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
-
-LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
+# 设置语言 中文 还是英文
+LANGUAGE_CODE = 'zh-Hans'  # 'en-us'
+# 设置时区
+TIME_ZONE = 'Asia/Shanghai'  # 'UTC'
 
 USE_I18N = True
 

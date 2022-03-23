@@ -24,7 +24,7 @@ class BookInfo(models.Model):
 
 # 人物先复制过来后期加原理
 class PeopleInfo(models.Model):
-            name = models.CharField(max_length=10)
-            gender = models.BooleanField()
+            name = models.CharField(max_length=10)  # 字符串字段
+            gender = models.BooleanField()  # 布尔类型字段
             # 外键约束：人物属于哪本书
             book = models.ForeignKey(BookInfo, on_delete=models.CASCADE)
